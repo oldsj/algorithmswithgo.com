@@ -1,5 +1,7 @@
 package module01
 
+import "fmt"
+
 // Reverse will return the provided word in reverse
 // order. Eg:
 //
@@ -7,5 +9,9 @@ package module01
 //   Reverse("alphabet") => "tebahpla"
 //
 func Reverse(word string) string {
-	return ""
+	var reverse string
+	for i := range word {
+		reverse += string(word[len(word)-i-1])
+	}
+	return reverse
 }
